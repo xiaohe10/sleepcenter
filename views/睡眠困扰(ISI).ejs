@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include _base_head %>
+</head>
+
+<body>
+<% include _base_nav %>
+<div class="container-fluid">
+	<div class="row">
+		<% include _base_sidebar%>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<table class="table table-bordered" style="background-color:white;text-align:center;">
+				<tr>
+					<td colspan="6" >
+						<h1>睡眠困扰（ISI） </h1>
+					</td>
+
+				<tr>
+					<th colspan="6">1. 评估近两周内失眠问题的严重程度。</th>
+				</tr>
+
+
+				<tr>
+					<th colspan="3">a. 入睡困难：</th>
+					<td colspan="3" >
+						<form action="">
+							<input type="radio" name="isi_q1_a" value="0">无
+							<input type="radio" name="isi_q1_a" value="1">轻度
+							<input type="radio" name="isi_q1_a" value="2">中度
+							<input type="radio" name="isi_q1_a" value="3">重度
+							<input type="radio" name="isi_q1_a" value="4">非常严重
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="3">b. 无法维持较长的睡眠</th>
+					<td colspan="3" >
+						<form action="">
+							<input type="radio" name="isi_q1_b" value="0">无
+							<input type="radio" name="isi_q1_b" value="1">轻度
+							<input type="radio" name="isi_q1_b" value="2">中度
+							<input type="radio" name="isi_q1_b" value="3">重度
+							<input type="radio" name="isi_q1_b" value="4">非常严重
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="3">c. 太早醒：</th>
+					<td colspan="3" >
+						<form action="">
+							<input type="radio" name="isi_q1_c" value="0">无
+							<input type="radio" name="isi_q1_c" value="1">轻度
+							<input type="radio" name="isi_q1_c" value="2">中度
+							<input type="radio" name="isi_q1_c" value="3">重度
+							<input type="radio" name="isi_q1_c" value="4">非常严重
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="6">2. 您满意自己最近的睡眠状态吗？</th>
+
+				</tr>
+				<tr>
+					<td colspan="6" >
+						<form action="">
+							<input type="radio" name="isi_q2" value="0">非常满意
+							<input type="radio" name="isi_q2" value="1">满意
+							<input type="radio" name="isi_q2" value="2">中等
+							<input type="radio" name="isi_q2" value="3">不满意
+							<input type="radio" name="isi_q2" value="4">非常不满意
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+
+				</tr>
+				<th colspan="6">3. 睡眠问题是否有干扰到您的日常生活功能？（如：工作表现/日常琐事、专注力、记忆力、情绪等）。</th>
+				<tr>
+
+					<td colspan="6" >
+						<form action="">
+							<input type="radio" name="isi_q3" value="0">完全无干扰
+							<input type="radio" name="isi_q3" value="1">一点
+							<input type="radio" name="isi_q3" value="2">稍微
+							<input type="radio" name="isi_q3" value="3">很多
+							<input type="radio" name="isi_q3" value="4">非常的
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="6">4. 他人是否有注意到您的生活质量因睡眠问题受到影响？</th>
+				</tr>
+
+				<tr>
+					<td colspan="6" >
+						<form action="">
+							<input type="radio" name="isi_q4" value="0">完全没注意
+							<input type="radio" name="isi_q4" value="1">一点
+							<input type="radio" name="isi_q4" value="2">稍微
+							<input type="radio" name="isi_q4" value="3">很多
+							<input type="radio" name="isi_q4" value="4">非常注意
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="6">5. 最近的睡眠问题是否令您担心/困扰？</th>
+				</tr>
+
+				<tr>
+					<td colspan="6" >
+						<form action="">
+							<input type="radio" name="isi_q5" value="0">完全不担心
+							<input type="radio" name="isi_q5" value="1">一点
+							<input type="radio" name="isi_q5" value="2">稍微
+							<input type="radio" name="isi_q5" value="3">很多
+							<input type="radio" name="isi_q5" value="4">非常担心
+						</form>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" class="btn btn-block" value="提交">
+		</div>
+	</div>
+</div>
+</body>
+</html>
