@@ -10,1071 +10,1121 @@
         <div class="row">
             <% include _base_sidebar%>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <table class="table table-bordered" style="background-color:white;text-align:center;">
-                <tr>
-                    <td colspan="6" >
-                        <h2>北大医疗怡健殿睡眠门诊病历记录</h2>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >登记时间</th>
-                    <td colspan="3" >
-                        <!--<input class="form-control" type="text" name="register_date"-->
-                        <!--value="2016-01-01">-->
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker' style="width:280px">
-                                <input name="register_date" type='text' class="form-control" />
-                                <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                            </div>
-                        </div>
-                    </td>
-
-                    <th >病案号</th>
-                    <td colspan="1" ><div class="input-group">
-                        <div class="input-group-addon">NO.</div>
-                        <input class="form-control" type="text"  name="number"  value="1000">
-                    </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >姓名</th>
-                    <td >
-                        <input class="form-control" type="text" name="name" value="">
-                    </td>
-
-
-
-                    <th >性别</th>
-                    <td >
-                        <select class="form-control" name="gender">
-                            <option value="male">男</option>
-                            <option value="female">女</option>
-                        </select>
-                    </td>
-
-                    <th >年龄</th>
-                    <td >
-                        <input type="text" name="age" class="form-control" value="">
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >出生日期</th>
-                    <td colspan="1">
-                        <!--input class="form-control" type="text" name="brith_date" value=""-->
-
-                        <div class="form-group">
-                            <div class='input-group date' id='brithdatetimepicker' style="width:280px">
-                                <input name="brith_date" type='text' class="form-control" />
-                                <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                            </div>
-                        </div>
-
-                    </td>
-
-                    <th >民族</th>
-                    <td colspan="1">
-                        <input class="form-control" type="text" name="nation"
-                               value="汉">
-                    </td>
-
-                    <th colspan="1">婚姻</th>
-                    <td colspan="1" >
-                        <select class="form-control" name="marriage">
-                            <option value="unmarried">未婚</option>
-                            <option value="married">已婚</option>
-                            <option value="divorce">离异</option>
-                            <option value="widowed">丧偶</option>
-
-                        </select>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <th >职业</th>
-                    <td colspan="1">
-                        <input class="form-control" type="text" name="occupation"
-                               value="">
-                    </td>
-                    <th >工作单位</th>
-                    <td colspan="3">
-                        <input class="form-control" type="text" name="workplace"
-                               value="">
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <th >有效证件号码</th>
-                    <td colspan="2">
-                        <input class="form-control" type="text" name="IDnumber"
-                               value="">
-                    </td>
-                    <th >家庭住址</th>
-                    <td colspan="2">
-                        <input class="form-control" type="text" name="address"
-                               value="">
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <th  rowspan="3" >联系方式</th>
-                    <th >本人电话</th>
-                    <td colspan="4">
-                        <input class="form-control" type="text" name="telephone"
-                               value="">
-                    </td>
-
-                </tr>
-                <tr>
-                    <th >备用联系人电话</th>
-                    <td colspan="4">
-                        <input class="form-control" type="text" name="spare_tel"
-                               value="">
-                    </td>
-
-                <tr>
-                    <th >电子邮箱</th>
-                    <td colspan="4">
-                        <input class="form-control" type="text" name="email"
-                               value="">
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="6"><h4>一、失眠</h4></th>
-                </tr>
-
-                <tr>
-                    <th rowspan="6">1. 问题主诉</th>
-                    <th >问题</th>
-
-                    <th >频率/严重度</th>
-
-                    <th >问题</th>
-
-                    <th colspan="2">频率/严重度</th>
-
-                </tr>
-
-                <tr>
-                    <th >□ 入睡困难</th>
-                    <td  >
-                        <textarea  class="form-control" name="problem_1" rows="2" ></textarea>
-                    </td>
-                    <th >□ 早上不清醒</th>
-                    <td  colspan="2">
-                        <textarea  class="form-control" name="problem_2" rows="2" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th >□ 无法维持较长睡眠</th>
-                    <td  >
-                        <textarea  class="form-control" name="problem_3" rows="2" ></textarea>
-                    </td>
-                    <th >□ 白天嗜睡</th>
-                    <td  colspan="2">
-                        <textarea  class="form-control" name="problem_4" rows="2" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >□ 睡眠品质不好/浅睡</th>
-                    <td  >
-                        <textarea  class="form-control" name="problem_5" rows="2" ></textarea>
-                    </td>
-                    <th >□ 多梦</th>
-                    <td  colspan="2">
-                        <textarea  class="form-control" name="problem_6" rows="2" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >□ 太早起无法再入睡</th>
-                    <td  >
-                        <textarea  class="form-control" name="problem_7" rows="2" ></textarea>
-                    </td>
-                    <th >□ 打鼾</th>
-                    <td  colspan="2">
-                        <textarea  class="form-control" name="problem_8" rows="2" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >□ 需安眠药才能入睡</th>
-                    <td  >
-                        <textarea  class="form-control" name="problem_9" rows="2" ></textarea>
-                    </td>
-                    <th >□ 其他</th>
-                    <td  colspan="2">
-                        <textarea  class="form-control" name="problem_10" rows="2" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="6">2. 睡眠习惯</th>
-                    <!--th >（1）整体精神</th>
-                    <td  colspan="4">
-                    <textarea  class="form-control" name="liangbiaoshaicha" rows="2" >筛查文本框。</textarea>
-                    </td-->
-                </tr>
-                <tr>
-                    <td colspan="6">睡眠习惯量表（SHPS）</td>
-                </tr>
-
-                <tr>
-                    <th colspan="6">3. 睡眠信念与态度</th>
-                </tr>
-                <tr>
-                    <td colspan="6">睡眠信念与态度量表（DBAS）</td>
-                </tr>
-
-                <tr>
-                    <th rowspan="3">4. 精神，情感与认知</th>
-                    <th >整体精神</th>
-                    <td colspan="4">
-                        <form action="">
-                            <input type="checkbox" name="spirit" value="疲劳">疲劳
-                            <input type="checkbox" name="spirit" value="嗜睡">嗜睡
-                            <input type="checkbox" name="spirit" value="亢奋">亢奋
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >情绪动机</th>
-                    <td colspan="4">
-                        <form action="">
-                            <input type="checkbox" name="emotion" value="烦躁">烦躁
-                            <input type="checkbox" name="emotion" value="易怒">易怒
-                            <input type="checkbox" name="emotion" value="忧郁">忧郁
-                            <input type="checkbox" name="emotion" value="动机下降">动机下降
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >认知表现下降</th>
-                    <td colspan="4">
-                        <form action="">
-                            <input type="checkbox" name="cognition_decline" value="工作/学业方面">工作/学业方面
-                            <input type="checkbox" name="cognition_decline" value="记忆力">记忆力
-                            <input type="checkbox" name="cognition_decline" value="注意力">注意力
-                            <input type="checkbox" name="cognition_decline" value="思考能力">思考能力
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="8">5. 睡眠病史</th>
-
-                    <th>之前睡眠情况</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_state_former" rows="1" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>现在睡眠情况</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_state_now" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>睡眠变化的原因</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_state_changeReason" rows="1" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>目前的治疗方法</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="treatment_plan" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>目前疗效</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="treatment_result" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>此次求诊原因</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="from_reason" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>个人治疗目标</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="treatment_target" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>期待何种治疗</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="treatment_method" rows="1" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="9">6. 睡眠环境</th>
-
-                    <th>睡眠相关物质</th>
-                    <td colspan="4" > （数量／时间）</td>
-                </tr>
-                <tr>
-                    <th>□ 咖啡</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_coffee" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>□ 茶</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_tea" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>□ 其他咖啡因饮料</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_otherdrink" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>□ 烟</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_smoke" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>□ 酒</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_alcohol" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>□ 噪音、光线等影响</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_voice" rows="1" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>□ 陌生环境睡眠</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_strange" rows="1" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th>□ 其他刺激性物质</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="sleep_environmental_otherreasonssleep" rows="1" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="6">7. 心理/精神问题史</th>
-
-                    <th>压力</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="pressure" value="家庭压力">家庭压力
-                            <input type="checkbox" name="pressure" value="工作压力">工作压力
-                            <input type="checkbox" name="pressure" value="人际关系压力">人际关系压力
-                            <input type="checkbox" name="pressure" value="其他压力">其他压力
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th>人格特性</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="personality_trait" value="抑郁">抑郁
-                            <input type="checkbox" name="personality_trait" value="焦虑">焦虑
-                            <input type="checkbox" name="personality_trait" value="追求完美">追求完美
-                            <input type="checkbox" name="personality_trait" value="多疑">多疑
-                            <input type="checkbox" name="personality_trait" value="敏感">敏感
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th>生理症状</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="physiological_state" value="食欲改变">食欲改变
-                            <input type="checkbox" name="physiological_state" value="疲倦">疲倦
-                            <input type="checkbox" name="physiological_state" value="性欲下降">性欲下降
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th>情绪症状</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="emotion_state" value="经常哭泣">经常哭泣
-                            <input type="checkbox" name="emotion_state" value="无快乐感">无快乐感
-                            <input type="checkbox" name="emotion_state" value="低落不振">低落不振
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th>认知</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="cognition" value="无价值感">无价值感
-                            <input type="checkbox" name="cognition" value="无望感">无望感
-                            <input type="checkbox" name="cognition" value="无法集中注意力">无法集中注意力
-                            <input type="checkbox" name="cognition" value="罪恶感">罪恶感
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th>物质依赖</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="material_dependence" value="安眠药">安眠药
-                            <input type="checkbox" name="material_dependence" value="止痛药">止痛药
-                            <input type="checkbox" name="material_dependence" value="麻醉剂">麻醉剂
-                            <input type="checkbox" name="material_dependence" value="酒精">酒精
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-
-                <tr>
-                    <th rowspan="2">8. 睡眠异常症状</th>
-
-                    <th>1. 不安腿（未睡躺着不动时，手脚有无奇怪的感觉，一定要动一动才会消失）</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="buantui" value="yes">有
-                            <input type="radio" name="buantui" value="no">无
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th>2. PLM（发作性睡病）相关疾病</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="PLM" value="贫血">贫血
-                            <input type="checkbox" name="PLM" value="末梢神经病变">末梢神经病变
-                            <input type="checkbox" name="PLM" value="血液循环不良">血液循环不良
-                            <input type="checkbox" name="PLM" value="肾脏病">肾脏病
-                            <input type="checkbox" name="PLM" value="糖尿病">糖尿病
-                        </form>
-                    </td>
-                </tr>
-
-
-
-
-
-
-
-
-                <tr>
-                    <th colspan="6"><h4>二、睡眠呼吸窘迫综合征</h4></th>
-                </tr>
-
-                <tr>
-                    <th colspan="2">1. 打鼾情况</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="snore_state" value="不打鼾">不打鼾
-                            <input type="radio" name="snore_state" value="1-2次/月">1-2次/月
-                            <input type="radio" name="snore_state" value="1-2次/周">1-2次/周
-                            <input type="radio" name="snore_state" value="3-4次/周">3-4次/周
-                            <input type="radio" name="snore_state" value="几乎每天">几乎每天
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">2. 打鼾声</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="snore_voice" value="比正常呼吸响">比正常呼吸响
-                            <input type="radio" name="snore_voice" value="比说话声音小">比说话声音小
-                            <input type="radio" name="snore_voice" value="同说话声音">同说话声音
-                            <input type="radio" name="snore_voice" value="比说话声音响">比说话声音响
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">3. 呼吸暂停</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="breath_pause" value="1-2次/月">1-2次/月
-                            <input type="radio" name="breath_pause" value="1-2次/周">1-2次/周
-                            <input type="radio" name="breath_pause" value="3-4次/周">3-4次/周
-                            <input type="radio" name="breath_pause" value="几乎每天">几乎每天
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">4. 气哽（憋气）情况</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="choking" value="难以平卧睡眠">难以平卧睡眠
-                            <input type="radio" name="choking" value="憋气感明显">憋气感明显
-                            <input type="radio" name="choking" value="无憋气">无憋气
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">5. 睡眠中</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="sleeping" value="不安腿">不安腿
-                            <input type="checkbox" name="sleeping" value="睡眠腿动">睡眠腿动
-                            <input type="checkbox" name="sleeping" value="挥手或拍床">挥手或拍床
-                            <input type="checkbox" name="sleeping" value="抽搐">抽搐
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">6. 睡眠中异常</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="sleep_abnormal" value="呻吟叫喊">呻吟叫喊
-                            <input type="checkbox" name="sleep_abnormal" value="梦呓">梦呓
-                            <input type="checkbox" name="sleep_abnormal" value="磨牙">磨牙
-                            <input type="checkbox" name="sleep_abnormal" value="睡眠行走/活动">睡眠行走/活动
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">7. 睡眠中感受</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="sleeping_feel" value="夜间反酸">夜间反酸
-                            <input type="checkbox" name="sleeping_feel" value="夜间心前区不适/心绞痛/胸闷">夜间心前区不适/心绞痛/胸闷
-                            <input type="checkbox" name="sleeping_feel" value="多汗">多汗
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">8. 晨起</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="chenqi" value="头疼/头晕">头疼/头晕
-                            <input type="checkbox" name="chenqi" value="口干">口干
-                            <input type="checkbox" name="chenqi" value="疲乏困倦">疲乏困倦
-                            <input type="checkbox" name="chenqi" value="幽居癖">幽居癖
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">9. 家族病史</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="familial_disease" value="睡眠呼吸暂停">睡眠呼吸暂停
-                            <input type="checkbox" name="familial_disease" value="鼾症">鼾症
-                            <input type="checkbox" name="familial_disease" value="嗜睡">嗜睡
-                            <input type="checkbox" name="familial_disease" value="冠心病">冠心病
-                            <input type="checkbox" name="familial_disease" value="高血压">高血压
-                            <input type="checkbox" name="familial_disease" value="糖尿病">糖尿病<br>
-                            <input type="checkbox" name="familial_disease" value="other">其他
-                            <input class="form-control" type="text" name="familial_disease_other" value="">
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="4">10. 呼吸机治疗史（有则填写）</th>
-                    <th >呼吸机</th>
-                    <td  colspan="4">
-                        <form action="">
-                            <input type="checkbox" name="respirator" value="CPAP">CPAP
-                            <input type="checkbox" name="respirator" value="Auto-CPAP">Auto-CPAP
-                            <input type="checkbox" name="respirator" value="BiPAP">BiPAP
-                            <input type="checkbox" name="respirator" value="Auto-BiPAP">Auto-BiPAP
-                            <input type="checkbox" name="respirator" value="伺服">伺服
-                        </form>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <th >治疗开始时间</th>
-                    <td colspan="4" >
-                        <textarea  class="form-control" name="treatment_begintime" rows="2" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th >实际使用</th>
-                    <td  colspan="4">
-                        <form action="">
-                            <input type="radio" name="real_use" value="每夜">每夜
-                            <input type="radio" name="real_use" value="3-5次/周">3-5次/周
-                            <input type="radio" name="real_use" value="1-2次/周">1-2次/周
-                            <input type="radio" name="real_use" value="停用1月">停用1月
-                            <input type="radio" name="real_use" value="停用3月以上">停用3月以上
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >停用原因</th>
-                    <td  colspan="4">
-                        <textarea  class="form-control" name="stopreason" rows="2" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>11. 体格检查</th>
-                    <td >颈围
-                        <input class="form-control" type="text" name="neckline" value="">cm
-                    </td>
-                    <td >胸围
-                        <input class="form-control" type="text" name="bust" value="">cm
-                    </td>
-                    <td >腰围
-                        <input class="form-control" type="text" name="waistline" value="">cm
-                    </td>
-                    <td >腹围
-                        <input class="form-control" type="text" name="bellies" value="">cm
-                    </td>
-                    <td >臀围
-                        <input class="form-control" type="text" name="hipline" value="">cm
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <th rowspan="7">12. 辅助检查</th>
-                    <td colspan="2">胸片／CT
-                        <input class="form-control" type="text" name="CT" value="">
-                    </td>
-                    <td colspan="2">肺功能
-                        <input class="form-control" type="text" name="PF" value="">
-                    </td>
-                    <td >动态血压
-                        <input class="form-control" type="text" name="blood pressure" value="">
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="1">血气分析</th>
-
-                    <td >PH
-                        <input class="form-control" type="text" name="PH" value="">
-                    </td>
-                    <td >PCO2
-                        <input class="form-control" type="text" name="PCO2" value="">
-                    </td>
-                    <td >SB
-                        <input class="form-control" type="text" name="SB" value="">
-                    </td>
-                    <td >AB
-                        <input class="form-control" type="text" name="AB" value="">
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="2">血生化</th>
-                    <td >UA
-                        <input class="form-control" type="text" name="UA" value="">
-                    </td>
-                    <td >CHO
-                        <input class="form-control" type="text" name="CHO" value="">
-                    </td>
-                    <td >TG
-                        <input class="form-control" type="text" name="TG" value="">
-                    </td>
-                    <td >HDL
-                        <input class="form-control" type="text" name="HDL" value="">
-                    </td>
-                </tr>
-                <tr>
-                    <td >LDL
-                        <input class="form-control" type="text" name="LDL" value="">
-                    </td>
-                    <td >Glu
-                        <input class="form-control" type="text" name="Glu" value="">
-                    </td>
-
-                    <td ></td>
-                    <td ></td>
-                </tr>
-
-                <tr>
-                    <th rowspan="2">甲状腺功能</th>
-                    <td >T3
-                        <input class="form-control" type="text" name="T3" value="">
-                    </td>
-                    <td >T4
-                        <input class="form-control" type="text" name="T4" value="">
-                    </td>
-                    <td >FT3
-                        <input class="form-control" type="text" name="FT3" value="">
-                    </td>
-                    <td >FT4
-                        <input class="form-control" type="text" name="FT4" value="">
-                    </td>
-                </tr>
-                <tr>
-                    <td >aTg
-                        <input class="form-control" type="text" name="aTg" value="">
-                    </td>
-                    <td >aTPO
-                        <input class="form-control" type="text" name="aTPO" value="">
-                    </td>
-
-                    <td ></td>
-                    <td ></td>
-                </tr>
-                <tr>
-                    <th colspan="1">血常规</th>
-                    <td colspan="4">
-                        <textarea  class="form-control" name="blood" rows="2" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="6"><h4>三、睡眠口腔问题</h4></th>
-                </tr>
-
-                <tr>
-                    <th colspan="6">1. 打鼾
-                        <input class="form-control" type="text" name="snore_time" value="">年
-                    </th>
-                </tr>
-
-                <tr>
-                    <th colspan="2">2. 鼾声大小</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="snore_volume" value="很响，室外可闻">很响，室外可闻
-                            <input type="radio" name="snore_volume" value="响，影响室内">响，影响室内
-                            <input type="radio" name="snore_volume" value="不是很响，只影响同床者">不是很响，只影响同床者
-                            <input type="radio" name="snore_volume" value="基本不影响同床者">基本不影响同床者
-                            <input type="radio" name="snore_volume" value="不知道">不知道
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="2">3. 鼾声类型</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="radio" name="snore_kinds" value="声低沉，似为喉舌部发音">声低沉，似为喉舌部发音
-                            <input type="radio" name="snore_kinds" value="声调高，似为软腭部发音">声调高，似为软腭部发音
-                            <input type="radio" name="snore_kinds" value="不知道">不知道
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="14">4. 口腔科相关问题</th>
-
-                    <th>部位</th>
-
-                    <th colspan="4">相关问题</th>
-                </tr>
-
-                <tr>
-                    <th >鼻</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="norse" value="正常">正常
-                            <input type="checkbox" name="norse" value="中隔偏曲">中隔偏曲
-                            <input type="checkbox" name="norse" value="鼻甲肥大">鼻甲肥大
-                            <input type="checkbox" name="norse" value="鼻腔充血">鼻腔充血
-                            <input type="checkbox" name="norse" value="other">其他
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th >下颌</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="jaw" value="正常">正常
-                            <input type="checkbox" name="jaw" value="缩颌">缩颌
-                            <input type="checkbox" name="jaw" value="小颌">小颌
-                            <input type="checkbox" name="jaw" value="颞下颌关节">颞下颌关节
-                            <input type="checkbox" name="jaw" value="other">其他
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >鼻咽</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="nasopharynx" value="正常">正常
-                            <input type="checkbox" name="nasopharynx" value="粘膜充血">粘膜充血
-                            <input type="checkbox" name="nasopharynx" value="新生物">新生物
-                            <input type="checkbox" name="nasopharynx" value="腺样体肥大">腺样体肥大
-                            <input type="checkbox" name="nasopharynx" value="other">其他
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >软腭</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="palate" value="正常">正常
-                            <input type="checkbox" name="palate" value="粘膜充血">粘膜充血
-                            <input type="checkbox" name="palate" value="水肿">水肿
-                            <input type="checkbox" name="palate" value="下垂">下垂
-                            <input type="checkbox" name="palate" value="切除">切除
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >口咽</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="throat" value="正常">正常
-                            <input type="checkbox" name="throat" value="充血">充血
-                            <input type="checkbox" name="throat" value="狭窄">狭窄
-                            <input type="checkbox" name="throat" value="滤泡增生">滤泡增生
-                            <input type="checkbox" name="throat" value="紫钳">紫钳
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >悬雍垂</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="uvula" value="正常">正常
-                            <input type="checkbox" name="uvula" value="充血">充血
-                            <input type="checkbox" name="uvula" value="肥大">肥大
-                            <input type="checkbox" name="uvula" value="切除">切除
-                            <input type="checkbox" name="uvula" value="other">其他
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >扁桃体</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="tonsil" value="无肿大">无肿大
-                            <input type="checkbox" name="tonsil" value="I度">I度
-                            <input type="checkbox" name="tonsil" value="II度">II度
-                            <input type="checkbox" name="tonsil" value="III度">III度
-                            <input type="checkbox" name="tonsil" value="切除">切除
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >Mallampati</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="Mallampati" value="I">I
-                            <input type="checkbox" name="Mallampati" value="II">II
-                            <input type="checkbox" name="Mallampati" value="III">III
-                            <input type="checkbox" name="Mallampati" value="IV">IV
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >舌</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="tongue" value="正常">正常
-                            <input type="checkbox" name="tongue" value="齿痕">齿痕
-                            <input type="checkbox" name="tongue" value="舌体增大">舌体增大
-                            <input type="checkbox" name="tongue" value="舌炎">舌炎
-                            <input type="checkbox" name="tongue" value="其他">其他
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >牙齿</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="tooth" value="正常">正常
-                            <input type="checkbox" name="tooth" value="反颌">反颌
-                            <input type="checkbox" name="tooth" value="超颌">超颌
-                            <input type="checkbox" name="tooth" value="齿列拥挤错乱">齿列拥挤错乱
-                            <input type="checkbox" name="tooth" value="磨损">磨损
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >牙周</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="around_tooth" value="炎症">炎症
-                            <input type="checkbox" name="around_tooth" value="红肿">红肿
-                            <input type="checkbox" name="around_tooth" value="牙周炎">牙周炎
-                            <input type="checkbox" name="around_tooth" value="other">其他
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >颈</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="neck" value="正常">正常
-                            <input type="checkbox" name="neck" value="颈短">颈短
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <th >甲状腺</th>
-                    <td colspan="4" >
-                        <form action="">
-                            <input type="checkbox" name="thyroid" value="正常">正常
-                            <input type="checkbox" name="thyroid" value="I度">I度
-                            <input type="checkbox" name="thyroid" value="II度">II度
-                            <input type="checkbox" name="thyroid" value="III度">III度
-                            <input type="checkbox" name="thyroid" value="other">其他
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>5. 手术或其他治疗</th>
-                    <td  colspan="5">
-                        <form action="">
-                            <input type="checkbox" name="oral_treat" value="扁桃体切除">扁桃体切除
-                            <input type="checkbox" name="oral_treat" value="腺样体切除">腺样体切除
-                            <input type="checkbox" name="oral_treat" value="UPPP">UPPP
-                            <input type="checkbox" name="oral_treat" value="鼻部手术">鼻部手术<br>
-                            <input type="checkbox" name="oral_treat" value="软腭物理治疗">软腭物理治疗
-                            <input type="checkbox" name="oral_treat" value="口腔矫治术">口腔矫治术
-                            <input type="checkbox" name="oral_treat" value="口器">口器
-                            <input type="checkbox" name="oral_treat" value="体位治疗">体位治疗
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th rowspan="3">6. 口腔X线片检查</th>
-                    <th>部位</th>
-                    <th colspan="2">所见</th>
-                    <th colspan="2">时间</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="form-control" type="text" name="oral_X-ray_position1" value="">
-                    </td>
-                    <td colspan="2">
-                        <input class="form-control" type="text" name="oral_X-ray_expression1" value="">
-                    </td>
-                    <td colspan="2">
-                        <input class="form-control" type="text" name="oral_X-ray_time1" value="">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="form-control" type="text" name="oral_X-ray_position2" value="">
-                    </td>
-                    <td colspan="2">
-                        <input class="form-control" type="text" name="oral_X-ray_expression2" value="">
-                    </td>
-                    <td colspan="2">
-                        <input class="form-control" type="text" name="oral_X-ray_time2" value="">
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="6"><h4>四、初步诊断</h4></th>
-                </tr>
-
-                <tr>
-                    <td  colspan="2" rowspan="2">
-                        <form action="">
-                            <input type="checkbox" name="diagnosis_result" value="短暂性失眠">短暂性失眠
-                            <input type="checkbox" name="diagnosis_result" value="心理生理性失眠">心理生理性失眠
-                            <input type="checkbox" name="diagnosis_result" value="特发性失眠">特发性失眠
-                            <input type="checkbox" name="diagnosis_result" value="依赖催眠的睡眠障碍">依赖催眠的睡眠障碍<br>
-                            <input type="checkbox" name="diagnosis_result" value="延迟睡眠期">延迟睡眠期
-                            <input type="checkbox" name="diagnosis_result" value="睡眠卫生不良">睡眠卫生不良
-                        </form>
-                    </td>
-                    <td colspan="2">与失眠相关的其他临床/睡眠障碍
-                    </td>
-
-                    <td  colspan="2" rowspan="2">其他
-                        <textarea  class="form-control" name="diagnosis_result_other" rows="3" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td  colspan="2">
-                        <form action="">
-                            <input type="checkbox" name="sleep_obstacle" value="R/O 睡眠相关的呼吸障碍">R/O 睡眠相关的呼吸障碍 <br>
-                            <input type="checkbox" name="sleep_obstacle" value="R/O 阶段性四肢运动障碍">R/O 阶段性四肢运动障碍<br>
-                            <input type="checkbox" name="sleep_obstacle" value="多动腿症状">多动腿症状
-                        </form>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="6">3P模型（睡眠因子3P分析）</th>
-
-                </tr>
-
-                <tr>
-                    <td colspan="6">3P模型（睡眠因子3P分析）</td>
-                </tr>
-
-                <tr>
-                    <th colspan="6"><h4>五、治疗计划与建议</h4></th>
-                </tr>
-
-                <tr>
-                    <td  colspan="4" rowspan="2">
-                        <form action="">
-                            <input type="checkbox" name="treatment_suggest" value="睡眠卫生教育">睡眠卫生教育
-                            <input type="checkbox" name="treatment_suggest" value="刺激控制">刺激控制
-                            <input type="checkbox" name="treatment_suggest" value="睡眠限制">睡眠限制
-                            <input type="checkbox" name="treatment_suggest" value="认知治疗">认知治疗
-                            <input type="checkbox" name="treatment_suggest" value="光照射">光照射
-                            <input type="checkbox" name="treatment_suggest" value="松驰训练">松驰训练
-                            <input type="checkbox" name="treatment_suggest" value="心理咨询/治疗">心理咨询/治疗<br>
-                            <input type="checkbox" name="treatment_suggest" value="多导睡眠监测PSG">多导睡眠监测PSG
-                            <input type="checkbox" name="treatment_suggest" value="家庭便携睡眠监测">家庭便携睡眠监测
-                            <input type="checkbox" name="treatment_suggest" value="CPAP/BIPA滴定">CPAP/BIPA滴定
-                            <input type="checkbox" name="treatment_suggest" value="医学检查/实验">医学检查/实验
-                            <input type="checkbox" name="treatment_suggest" value="other">其他
-                        </form>
-                    </td>
-                    <th colspan= "2">其他</th>
-                </tr>
-                <tr>
-                    <td  colspan="2" >
-                        <textarea  class="form-control" name="treatment_suggest_other" rows="3" ></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th colspan="4" rowspan="2" ></th>
-                    <td  colspan="2" > 医生签字：<input type="text" name="doctor" class="form-control" value=""></td>
-                </tr>
-
-                <tr>
-                    <td  colspan="2" > 日期：
-                        <div class="form-group">
-                            <div class='input-group date' id='checkdatetimepicker' style="width:280px">
-                                <input name="check_date" type='text' class="form-control" />
-                                <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                    <table class="table table-bordered" style="background-color:white;text-align:center;">
+                        <tr>
+                            <td colspan="6" >
+                                <h2>北大医疗怡健殿睡眠门诊病历记录</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="6"><h4>一、基本信息</h4></th>
+                        </tr>
+                        <tr>
+                            <th >登记时间</th>
+                            <td colspan="3" >
+                                <!--<input class="form-control" type="text" name="register_date"-->
+                                <!--value="2016-01-01">-->
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker' style="width:280px">
+                                        <input name="register_date" type='text' class="form-control" />
+                                        <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <th >病案号</th>
+                            <td colspan="1" ><div class="input-group">
+                                    <div class="input-group-addon">NO.</div>
+                                    <input class="form-control" type="text"  name="idNumber"  value="1000">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >姓名</th>
+                            <td >
+                                <input class="form-control" type="text" name="name" value="">
+                            </td>
+
+
+
+                            <th >性别</th>
+                            <td >
+                                <select class="form-control" name="gender">
+                                    <option value="male">男</option>
+                                    <option value="female">女</option>
+                                </select>
+                            </td>
+
+                            <th >年龄</th>
+                            <td >
+                                <input type="text" name="age" class="form-control" value="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >出生日期</th>
+                            <td colspan="1">
+                                <!--input class="form-control" type="text" name="brith_date" value=""-->
+
+                                <div class="form-group">
+                                    <div class='input-group date' id='brithdatetimepicker' style="width:280px">
+                                        <input name="brith_date" type='text' class="form-control" />
+                                        <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <th >民族</th>
+                            <td colspan="1">
+                                <input class="form-control" type="text" name="nation"
+                                       value="汉">
+                            </td>
+
+                            <th colspan="1">婚姻</th>
+                            <td colspan="1" >
+                                <select class="form-control" name="marriage">
+                                    <option value="unmarried">未婚</option>
+                                    <option value="married">已婚</option>
+                                    <option value="divorce">离异</option>
+                                    <option value="widowed">丧偶</option>
+
+                                </select>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th >职业</th>
+                            <td colspan="1">
+                                <select class="form-control" name="occupation">
+                                    <option value="1">计算机、IT、互联网</option>
+                                    <option value="2">金融、银行、证券等</option>
+                                    <option value="3">航空、民航、驾驶等行业</option>
+                                    <option value="4">政府机关、企事业单位</option>
+                                    <option value="5">私营企业、个体劳动者</option>
+                                    <option value="6">新闻、广告、设计、教育</option>
+                                    <option value="7">销售、服务行业</option>
+                                    <option value="8">演艺、体育行业</option>
+                                    <option value="9">制造工人</option>
+                                    <option value="10">农林牧渔业</option>
+                                    <option value="11">军人</option>
+                                    <option value="12">学生及学龄前儿童</option>
+                                    <option value="13">退休人员</option>
+                                    <option value="14">无业及自由职业者</option>
+                                </select>
+                            </td>
+
+                            <th >教育程度</th>
+                            <td >
+                                <select class="form-control" name="education">
+                                    <option value="1">研究生及以上</option>
+                                    <option value="2">本科</option>
+                                    <option value="3">大专</option>
+                                    <option value="4">高中及以下</option>
+
+                                </select>
+                            </td>
+                            <th >子女情况</th>
+                            <td colspan="3">
+                                <input class="form-control" type="text" name="children"
+                                       value="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >工作单位</th>
+                            <td colspan="1">
+                                <input class="form-control" type="text" name="workplace"
+                                       value="">
+                            </td>
+                            <th >职务</th>
+                            <td colspan="3">
+                                <input class="form-control" type="text" name="post"
+                                       value="">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <th >证件号码</th>
+                            <td colspan="1">
+                                <input class="form-control" type="text" name="ID"
+                                       value="">
+                            </td>
+                            <th >家庭住址</th>
+                            <td colspan="3">
+                                <input class="form-control" type="text" name="address"
+                                       value="">
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th  rowspan="3" >联系方式</th>
+                            <th >本人电话</th>
+                            <td colspan="4">
+                                <input class="form-control" type="text" name="telephone"
+                                       value="">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th >备用联系人电话</th>
+                            <td colspan="4">
+                                <input class="form-control" type="text" name="spare_tel"
+                                       value="">
+                            </td>
+
+                        <tr>
+                            <th >电子邮箱</th>
+                            <td colspan="4">
+                                <input class="form-control" type="text" name="email"
+                                       value="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="6"><h4>二、睡眠相关信息</h4></th>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="6">1. 问题主诉</th>
+                            <th >问题</th>
+
+                            <th >频率/严重度</th>
+
+                            <th >问题</th>
+
+                            <th colspan="2">频率/严重度</th>
+
+                        </tr>
+
+                        <tr>
+                            <th >入睡困难</th>
+                            <td  >
+                                <textarea  class="form-control" name="problem_1" rows="2" ></textarea>
+                            </td>
+                            <th >早上不清醒</th>
+                            <td  colspan="2">
+                                <textarea  class="form-control" name="problem_2" rows="2" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >无法维持较长睡眠</th>
+                            <td  >
+                                <textarea  class="form-control" name="problem_3" rows="2" ></textarea>
+                            </td>
+                            <th >白天嗜睡</th>
+                            <td  colspan="2">
+                                <textarea  class="form-control" name="problem_4" rows="2" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >睡眠品质不好/浅睡</th>
+                            <td  >
+                                <textarea  class="form-control" name="problem_5" rows="2" ></textarea>
+                            </td>
+                            <th >多梦</th>
+                            <td  colspan="2">
+                                <textarea  class="form-control" name="problem_6" rows="2" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >太早起无法再入睡</th>
+                            <td  >
+                                <textarea  class="form-control" name="problem_7" rows="2" ></textarea>
+                            </td>
+                            <th >需安眠药才能入睡</th>
+                            <td colspan="2" >
+                                <textarea  class="form-control" name="problem_9" rows="2" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <th >其他</th>
+                            <td  colspan="4">
+                                <textarea  class="form-control" name="problem_10" rows="2" ></textarea>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th colspan="6">2. 睡眠习惯</th>
+                        </tr>
+                        <tr>
+                            <td colspan="6">睡眠习惯量表（SHPS）</td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="6">3. 睡眠信念与态度</th>
+                        </tr>
+                        <tr>
+                            <td colspan="6">睡眠信念与态度量表（DBAS）</td>
+                        </tr>
+                        <tr>
+                            <th colspan="6">4. 睡眠身心状态</th>
+                        </tr>
+                        <tr>
+                            <td colspan="6">睡眠身心状态（PSAS）</td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="3">5. 精神，情感与认知</th>
+                            <th >整体精神</th>
+                            <td colspan="4">
+                                <form action="">
+                                    <input type="checkbox" name="spirit" value="疲劳">疲劳
+                                    <input type="checkbox" name="spirit" value="嗜睡">嗜睡
+                                    <input type="checkbox" name="spirit" value="亢奋">亢奋
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >情绪动机</th>
+                            <td colspan="4">
+                                <form action="">
+                                    <input type="checkbox" name="emotion" value="烦躁">烦躁
+                                    <input type="checkbox" name="emotion" value="易怒">易怒
+                                    <input type="checkbox" name="emotion" value="忧郁">忧郁
+                                    <input type="checkbox" name="emotion" value="动机下降">动机下降
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >认知表现下降</th>
+                            <td colspan="4">
+                                <form action="">
+                                    <input type="checkbox" name="cognition_decline" value="工作/学业方面">工作/学业方面
+                                    <input type="checkbox" name="cognition_decline" value="记忆力">记忆力
+                                    <input type="checkbox" name="cognition_decline" value="注意力">注意力
+                                    <input type="checkbox" name="cognition_decline" value="思考能力">思考能力
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="8">6. 睡眠病史</th>
+
+                            <th>之前睡眠情况</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_state_former" rows="1" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>现在睡眠情况</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_state_now" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>睡眠变化的原因</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_state_changeReason" rows="1" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>目前的治疗方法</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="treatment_plan" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>目前疗效</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="treatment_result" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>此次求诊原因</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="from_reason" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>个人治疗目标</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="treatment_target" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>期待何种治疗</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="treatment_method" rows="1" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="9">7. 睡眠环境</th>
+
+                            <th>睡眠相关物质</th>
+                            <td colspan="4" > （数量／时间）</td>
+                        </tr>
+                        <tr>
+                            <th>咖啡</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_coffee" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>茶</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_tea" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>其他咖啡因饮料</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_otherdrink" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>烟</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_smoke" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>酒</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_alcohol" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>噪音、光线等影响</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_voice" rows="1" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>陌生环境睡眠</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_strange" rows="1" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>其他刺激性物质</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="sleep_environmental_otherreasonssleep" rows="1" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="6">8. 心理/精神问题史</th>
+
+                            <th>压力</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="pressure" value="家庭压力">家庭压力
+                                    <input type="checkbox" name="pressure" value="工作压力">工作压力
+                                    <input type="checkbox" name="pressure" value="人际关系压力">人际关系压力
+                                    <input type="checkbox" name="pressure" value="其他压力">其他压力
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>人格特性</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="personality_trait" value="抑郁">抑郁
+                                    <input type="checkbox" name="personality_trait" value="焦虑">焦虑
+                                    <input type="checkbox" name="personality_trait" value="追求完美">追求完美
+                                    <input type="checkbox" name="personality_trait" value="多疑">多疑
+                                    <input type="checkbox" name="personality_trait" value="敏感">敏感
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>生理症状</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="physiological_state" value="食欲改变">食欲改变
+                                    <input type="checkbox" name="physiological_state" value="疲倦">疲倦
+                                    <input type="checkbox" name="physiological_state" value="性欲下降">性欲下降
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>情绪症状</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="emotion_state" value="经常哭泣">经常哭泣
+                                    <input type="checkbox" name="emotion_state" value="无快乐感">无快乐感
+                                    <input type="checkbox" name="emotion_state" value="低落不振">低落不振
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>认知</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="cognition" value="无价值感">无价值感
+                                    <input type="checkbox" name="cognition" value="无望感">无望感
+                                    <input type="checkbox" name="cognition" value="无法集中注意力">无法集中注意力
+                                    <input type="checkbox" name="cognition" value="罪恶感">罪恶感
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>物质依赖</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="material_dependence" value="安眠药">安眠药
+                                    <input type="checkbox" name="material_dependence" value="止痛药">止痛药
+                                    <input type="checkbox" name="material_dependence" value="麻醉剂">麻醉剂
+                                    <input type="checkbox" name="material_dependence" value="酒精">酒精
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+
+                        <tr>
+                            <th rowspan="4">9. 睡眠异常症状</th>
+                            <th >睡眠中</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="sleeping" value="不安腿">不安腿
+                                    <input type="checkbox" name="sleeping" value="睡眠腿动">睡眠腿动
+                                    <input type="checkbox" name="sleeping" value="挥手或拍床">挥手或拍床
+                                    <input type="checkbox" name="sleeping" value="抽搐">抽搐
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >睡眠中异常</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="sleep_abnormal" value="呻吟叫喊">呻吟叫喊
+                                    <input type="checkbox" name="sleep_abnormal" value="梦呓">梦呓
+                                    <input type="checkbox" name="sleep_abnormal" value="磨牙">磨牙
+                                    <input type="checkbox" name="sleep_abnormal" value="睡眠行走/活动">睡眠行走/活动
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >睡眠中感受</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="sleeping_feel" value="夜间反酸">夜间反酸
+                                    <input type="checkbox" name="sleeping_feel" value="夜间心前区不适/心绞痛/胸闷">夜间心前区不适/心绞痛/胸闷
+                                    <input type="checkbox" name="sleeping_feel" value="多汗">多汗
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PLM（发作性睡病）相关疾病</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="PLM" value="贫血">贫血
+                                    <input type="checkbox" name="PLM" value="末梢神经病变">末梢神经病变
+                                    <input type="checkbox" name="PLM" value="血液循环不良">血液循环不良
+                                    <input type="checkbox" name="PLM" value="肾脏病">肾脏病
+                                    <input type="checkbox" name="PLM" value="糖尿病">糖尿病
+                                </form>
+                            </td>
+                        </tr>
+
+
+
+
+
+
+
+
+                        <tr>
+                            <th colspan="6"><h4>三、睡眠呼吸窘迫综合征</h4></th>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">1. 打鼾情况</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="radio" name="snore_state" value="不打鼾">不打鼾
+                                    <input type="radio" name="snore_state" value="1-2次/月">1-2次/月
+                                    <input type="radio" name="snore_state" value="1-2次/周">1-2次/周
+                                    <input type="radio" name="snore_state" value="3-4次/周">3-4次/周
+                                    <input type="radio" name="snore_state" value="几乎每天">几乎每天
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">2. 鼾声大小</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="radio" name="snore_volume" value="很响，室外可闻">很响，室外可闻
+                                    <input type="radio" name="snore_volume" value="响，影响室内">响，影响室内
+                                    <input type="radio" name="snore_volume" value="不是很响，只影响同床者">不是很响，只影响同床者
+                                    <input type="radio" name="snore_volume" value="基本不影响同床者">基本不影响同床者
+                                    <input type="radio" name="snore_volume" value="不知道">不知道
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">3. 鼾声类型</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="radio" name="snore_kinds" value="声低沉，似为喉舌部发音">声低沉，似为喉舌部发音
+                                    <input type="radio" name="snore_kinds" value="声调高，似为软腭部发音">声调高，似为软腭部发音
+                                    <input type="radio" name="snore_kinds" value="不知道">不知道
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">4. 呼吸暂停</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="radio" name="breath_pause" value="1-2次/月">1-2次/月
+                                    <input type="radio" name="breath_pause" value="1-2次/周">1-2次/周
+                                    <input type="radio" name="breath_pause" value="3-4次/周">3-4次/周
+                                    <input type="radio" name="breath_pause" value="几乎每天">几乎每天
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">5. 气哽（憋气）情况</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="radio" name="choking" value="难以平卧睡眠">难以平卧睡眠
+                                    <input type="radio" name="choking" value="憋气感明显">憋气感明显
+                                    <input type="radio" name="choking" value="无憋气">无憋气
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">6. 晨起</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="chenqi" value="头疼/头晕">头疼/头晕
+                                    <input type="checkbox" name="chenqi" value="口干">口干
+                                    <input type="checkbox" name="chenqi" value="疲乏困倦">疲乏困倦
+                                    <input type="checkbox" name="chenqi" value="幽居癖">幽居癖
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">7. 家族病史</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="familial_disease" value="睡眠呼吸暂停">睡眠呼吸暂停
+                                    <input type="checkbox" name="familial_disease" value="鼾症">鼾症
+                                    <input type="checkbox" name="familial_disease" value="嗜睡">嗜睡
+                                    <input type="checkbox" name="familial_disease" value="冠心病">冠心病
+                                    <input type="checkbox" name="familial_disease" value="高血压">高血压
+                                    <input type="checkbox" name="familial_disease" value="糖尿病">糖尿病<br>
+                                    <input type="checkbox" name="familial_disease" value="other">其他
+                                    <input class="form-control" type="text" name="familial_disease_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="4">8. 呼吸机治疗史（有则填写）</th>
+                            <th >呼吸机</th>
+                            <td  colspan="4">
+                                <form action="">
+                                    <input type="checkbox" name="respirator" value="CPAP">CPAP
+                                    <input type="checkbox" name="respirator" value="Auto-CPAP">Auto-CPAP
+                                    <input type="checkbox" name="respirator" value="BiPAP">BiPAP
+                                    <input type="checkbox" name="respirator" value="Auto-BiPAP">Auto-BiPAP
+                                    <input type="checkbox" name="respirator" value="伺服">伺服
+                                </form>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <th >治疗开始时间</th>
+                            <td colspan="4" >
+                                <textarea  class="form-control" name="treatment_begintime" rows="2" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >实际使用</th>
+                            <td  colspan="4">
+                                <form action="">
+                                    <input type="radio" name="real_use" value="每夜">每夜
+                                    <input type="radio" name="real_use" value="3-5次/周">3-5次/周
+                                    <input type="radio" name="real_use" value="1-2次/周">1-2次/周
+                                    <input type="radio" name="real_use" value="停用1月">停用1月
+                                    <input type="radio" name="real_use" value="停用3月以上">停用3月以上
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >停用原因</th>
+                            <td  colspan="4">
+                                <textarea  class="form-control" name="stopreason" rows="2" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="14">9. 体格检查</th>
+                            <td >颈围
+                                <input class="form-control" type="text" name="neckline" value="">cm
+                            </td>
+                            <td >胸围
+                                <input class="form-control" type="text" name="bust" value="">cm
+                            </td>
+                            <td >腰围
+                                <input class="form-control" type="text" name="waistline" value="">cm
+                            </td>
+                            <td >腹围
+                                <input class="form-control" type="text" name="bellies" value="">cm
+                            </td>
+                            <td >臀围
+                                <input class="form-control" type="text" name="hipline" value="">cm
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >鼻</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="norse" value="正常">正常
+                                    <input type="checkbox" name="norse" value="中隔偏曲">中隔偏曲
+                                    <input type="checkbox" name="norse" value="鼻甲肥大">鼻甲肥大
+                                    <input type="checkbox" name="norse" value="鼻腔充血">鼻腔充血
+                                    <input type="checkbox" name="norse" value="other">其他
+                                    <input class="form-control" type="text" name="norse_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >下颌</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="jaw" value="正常">正常
+                                    <input type="checkbox" name="jaw" value="缩颌">缩颌
+                                    <input type="checkbox" name="jaw" value="小颌">小颌
+                                    <input type="checkbox" name="jaw" value="颞下颌关节">颞下颌关节
+                                    <input type="checkbox" name="jaw" value="other">其他
+                                    <input class="form-control" type="text" name="jaw_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >鼻咽</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="nasopharynx" value="正常">正常
+                                    <input type="checkbox" name="nasopharynx" value="粘膜充血">粘膜充血
+                                    <input type="checkbox" name="nasopharynx" value="新生物">新生物
+                                    <input type="checkbox" name="nasopharynx" value="腺样体肥大">腺样体肥大
+                                    <input type="checkbox" name="nasopharynx" value="other">其他
+                                    <input class="form-control" type="text" name="nasopharynx_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >软腭</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="palate" value="正常">正常
+                                    <input type="checkbox" name="palate" value="粘膜充血">粘膜充血
+                                    <input type="checkbox" name="palate" value="水肿">水肿
+                                    <input type="checkbox" name="palate" value="下垂">下垂
+                                    <input type="checkbox" name="palate" value="切除">切除
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >口咽</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="throat" value="正常">正常
+                                    <input type="checkbox" name="throat" value="充血">充血
+                                    <input type="checkbox" name="throat" value="狭窄">狭窄
+                                    <input type="checkbox" name="throat" value="滤泡增生">滤泡增生
+                                    <input type="checkbox" name="throat" value="紫钳">紫钳
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >悬雍垂</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="uvula" value="正常">正常
+                                    <input type="checkbox" name="uvula" value="充血">充血
+                                    <input type="checkbox" name="uvula" value="肥大">肥大
+                                    <input type="checkbox" name="uvula" value="切除">切除
+                                    <input type="checkbox" name="uvula" value="other">其他
+                                    <input class="form-control" type="text" name="uvula_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >扁桃体</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="tonsil" value="无肿大">无肿大
+                                    <input type="checkbox" name="tonsil" value="I度">I度
+                                    <input type="checkbox" name="tonsil" value="II度">II度
+                                    <input type="checkbox" name="tonsil" value="III度">III度
+                                    <input type="checkbox" name="tonsil" value="切除">切除
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >Mallampati</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="Mallampati" value="I">I
+                                    <input type="checkbox" name="Mallampati" value="II">II
+                                    <input type="checkbox" name="Mallampati" value="III">III
+                                    <input type="checkbox" name="Mallampati" value="IV">IV
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >舌</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="tongue" value="正常">正常
+                                    <input type="checkbox" name="tongue" value="齿痕">齿痕
+                                    <input type="checkbox" name="tongue" value="舌体增大">舌体增大
+                                    <input type="checkbox" name="tongue" value="舌炎">舌炎
+                                    <input type="checkbox" name="tongue" value="其他">其他
+                                    <input class="form-control" type="text" name="tongue_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >牙齿</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="tooth" value="正常">正常
+                                    <input type="checkbox" name="tooth" value="反颌">反颌
+                                    <input type="checkbox" name="tooth" value="超颌">超颌
+                                    <input type="checkbox" name="tooth" value="齿列拥挤错乱">齿列拥挤错乱
+                                    <input type="checkbox" name="tooth" value="磨损">磨损
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >牙周</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="around_tooth" value="炎症">炎症
+                                    <input type="checkbox" name="around_tooth" value="红肿">红肿
+                                    <input type="checkbox" name="around_tooth" value="牙周炎">牙周炎
+                                    <input type="checkbox" name="around_tooth" value="other">其他
+                                    <input class="form-control" type="text" name="around_tooth_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >颈</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="neck" value="正常">正常
+                                    <input type="checkbox" name="neck" value="颈短">颈短
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th >甲状腺</th>
+                            <td colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="thyroid" value="正常">正常
+                                    <input type="checkbox" name="thyroid" value="I度">I度
+                                    <input type="checkbox" name="thyroid" value="II度">II度
+                                    <input type="checkbox" name="thyroid" value="III度">III度
+                                    <input type="checkbox" name="thyroid" value="other">其他
+                                    <input class="form-control" type="text" name="thyroid_other" value="">
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="7">10. 生化检查</th>
+
+
+                            <th  >血常规</th>
+                            <td >RBC
+                                <input class="form-control" type="text" name="RBC" value="">
+                            </td>
+                            <td >WBC
+                                <input class="form-control" type="text" name="WBC" value="">
+                            </td>
+                            <td >PLT
+                                <input class="form-control" type="text" name="PLT" value="">
+                            </td>
+                            <td >HGB
+                                <input class="form-control" type="text" name="HGB" value="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2">血生化</th>
+                            <td >UA
+                                <input class="form-control" type="text" name="UA" value="">
+                            </td>
+                            <td >CHO
+                                <input class="form-control" type="text" name="CHO" value="">
+                            </td>
+                            <td >TG
+                                <input class="form-control" type="text" name="TG" value="">
+                            </td>
+                            <td >HDL
+                                <input class="form-control" type="text" name="HDL" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >LDL
+                                <input class="form-control" type="text" name="LDL" value="">
+                            </td>
+                            <td >Glu
+                                <input class="form-control" type="text" name="Glu" value="">
+                            </td>
+
+                            <td colspan="2"></td>
+
+                        </tr>
+
+                        <tr>
+                            <th colspan="1">血气分析</th>
+
+                            <td >PH
+                                <input class="form-control" type="text" name="PH" value="">
+                            </td>
+                            <td >PCO2
+                                <input class="form-control" type="text" name="PCO2" value="">
+                            </td>
+                            <td >SB
+                                <input class="form-control" type="text" name="SB" value="">
+                            </td>
+                            <td >AB
+                                <input class="form-control" type="text" name="AB" value="">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <th>肺功能</th>
+                            <td ><input class="form-control" type="text" name="PF" value="">
+                            </td>
+                            <th>动态血压</th>
+                            <td ><input class="form-control" type="text" name="blood pressure" value="">
+                            </td>
+                            <td colspan="4"></td>
+                        </tr>
+
+
+                        <tr>
+                            <th rowspan="2">甲状腺功能</th>
+                            <td >T3
+                                <input class="form-control" type="text" name="T3" value="">
+                            </td>
+                            <td >T4
+                                <input class="form-control" type="text" name="T4" value="">
+                            </td>
+                            <td >FT3
+                                <input class="form-control" type="text" name="FT3" value="">
+                            </td>
+                            <td >FT4
+                                <input class="form-control" type="text" name="FT4" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >aTg
+                                <input class="form-control" type="text" name="aTg" value="">
+                            </td>
+                            <td >aTPO
+                                <input class="form-control" type="text" name="aTPO" value="">
+                            </td>
+
+                            <td colspan="2"></td>
+
+                        </tr>
+                        <tr>
+
+                        <tr>
+                            <th>11. 手术或其他治疗</th>
+                            <td  colspan="5">
+                                <form action="">
+                                    <input type="checkbox" name="oral_treat" value="扁桃体切除">扁桃体切除
+                                    <input type="checkbox" name="oral_treat" value="腺样体切除">腺样体切除
+                                    <input type="checkbox" name="oral_treat" value="UPPP">UPPP
+                                    <input type="checkbox" name="oral_treat" value="鼻部手术">鼻部手术<br>
+                                    <input type="checkbox" name="oral_treat" value="软腭物理治疗">软腭物理治疗
+                                    <input type="checkbox" name="oral_treat" value="口腔矫治术">口腔矫治术
+                                    <input type="checkbox" name="oral_treat" value="口器">口器
+                                    <input type="checkbox" name="oral_treat" value="体位治疗">体位治疗
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="4">12. 影像学检查</th>
+                            <th>部位</th>
+                            <th colspan="2">所见</th>
+                            <th colspan="2">时间</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                胸部<input class="form-control" type="text" name="oral_X-ray_position1" value="">
+                            </td>
+                            <td colspan="2">
+                                <input class="form-control" type="text" name="oral_X-ray_expression1" value="">
+                            </td>
+                            <td colspan="2">
+                                <input class="form-control" type="text" name="oral_X-ray_time1" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                口腔<input class="form-control" type="text" name="oral_X-ray_position2" value="">
+                            </td>
+                            <td colspan="2">
+                                <input class="form-control" type="text" name="oral_X-ray_expression2" value="">
+                            </td>
+                            <td colspan="2">
+                                <input class="form-control" type="text" name="oral_X-ray_time2" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                其他<input class="form-control" type="text" name="oral_X-ray_position3" value="">
+                            </td>
+                            <td colspan="2">
+                                <input class="form-control" type="text" name="oral_X-ray_expression3" value="">
+                            </td>
+                            <td colspan="2">
+                                <input class="form-control" type="text" name="oral_X-ray_time3" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="6"><h4>四、初步诊断</h4></th>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="3">睡眠障碍诊断</th>
+                            <th >1、失眠</th>
+                            <td  colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="result_insomnia" value="短暂性睡眠">短暂性睡眠<br>
+                                    <input type="checkbox" name="result_insomnia" value="心理生理性失眠">心理生理性失眠<br>
+                                    <input type="checkbox" name="result_insomnia" value="特发性失眠">特发性失眠<br>
+                                    <input type="checkbox" name="result_insomnia" value="依赖催眠的睡眠障碍">依赖催眠的睡眠障碍<br>
+                                    <input type="checkbox" name="result_insomnia" value="延迟睡眠期">延迟睡眠期 <br>
+                                    <input type="checkbox" name="result_insomnia" value="睡眠卫生不良">睡眠卫生不良<br>
+                                    <input type="checkbox" name="result_insomnia" value="精神疾病，药物所致失眠">精神疾病，药物所致失眠
+                                </form>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <th >2、睡眠相关的呼吸障碍</th>
+                            <td  colspan="4" >
+                                <form action="">
+                                    <input type="checkbox" name="result_breath" value="睡眠呼吸暂停低通气综合症OSAS">睡眠呼吸暂停低通气综合症OSAS<br>
+                                    <input type="checkbox" name="result_breath" value="中枢性呼吸暂停CSAS">中枢性呼吸暂停CSAS<br>
+                                    <input type="checkbox" name="result_breath" value="混合型呼吸暂停MSAS">混合型呼吸暂停MSAS
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th >3、与失眠相关的其他睡眠障碍</th>
+                            <td  colspan="4" >
+                                <form action=""><br>
+                                    <input type="checkbox" name="result_other" value="快动眼睡眠行为异常RBD">快动眼睡眠行为异常RBD<br>
+                                    <input type="checkbox" name="result_other" value="周期性腿动综合症PLMS">周期性腿动综合症PLMS<br>
+                                    <input type="checkbox" name="result_other" value="不宁腿综合症RLS">不宁腿综合症RLS<br>
+                                    <input type="checkbox" name="result_other" value="昼夜节律失调性睡眠-觉醒障碍CRSWD">昼夜节律失调性睡眠-觉醒障碍CRSWD<br>
+                                    <input type="checkbox" name="result_other" value="睡眠不足综合症">睡眠不足综合症<br>
+                                    <input type="checkbox" name="result_other" value="发作性睡病">发作性睡病<br>
+                                    <input type="checkbox" name="result_other" value="异态睡眠">异态睡眠
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="6">3P模型（睡眠因子3P分析）</th>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="6"><a id="back_3P" href="#3P">3P模型（睡眠因子3P分析）</a></td>
+
+                        </tr>
+
+                        <tr>
+                            <th colspan="6"><h4>五、治疗计划与建议</h4></th>
+                        </tr>
+
+                        <tr>
+                            <td  colspan="4" rowspan="2">
+                                <form action="">
+                                    <input type="checkbox" name="treatment_suggest" value="睡眠卫生教育">睡眠卫生教育<br>
+                                    <input type="checkbox" name="treatment_suggest" value="催眠">催眠<br>
+                                    <input type="checkbox" name="treatment_suggest" value="认知治疗CBTI">认知治疗CBTI<br>
+                                    <input type="checkbox" name="treatment_suggest" value="体感音乐治疗">体感音乐治疗<br>
+                                    <input type="checkbox" name="treatment_suggest" value="心理咨询/治疗">心理咨询/治疗<br>
+
+                                    <input type="checkbox" name="treatment_suggest" value="经颅磁刺激">经颅磁刺激<br>
+
+                                    <input type="checkbox" name="treatment_suggest" value="生物反馈">生物反馈<br>
+
+                                    <input type="checkbox" name="treatment_suggest" value="口腔矫正器">口腔矫正器<br>
+
+                                    <input type="checkbox" name="treatment_suggest" value="多导睡眠监测PSG">多导睡眠监测PSG<br>
+                                    <input type="checkbox" name="treatment_suggest" value="家庭便携睡眠监测">家庭便携睡眠监测<br>
+                                    <input type="checkbox" name="treatment_suggest" value="呼吸机">呼吸机<br>
+
+                                    <input type="checkbox" name="treatment_suggest" value="太极疗法">太极疗法<br>
+
+                                    <input type="checkbox" name="treatment_suggest" value="医学检查/实验">医学检查/实验<br>
+                                    <input type="checkbox" name="treatment_suggest" value="other">其他
+                                </form>
+                            </td>
+                            <th colspan= "2">其他</th>
+                        </tr>
+                        <tr>
+                            <td  colspan="2" >
+                                <textarea  class="form-control" name="treatment_suggest_other" rows="3" ></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="4" rowspan="2" ></th>
+                            <td  colspan="2" > 医生签字：<input type="text" name="doctor" class="form-control" value=""></td>
+                        </tr>
+
+                        <tr>
+                            <td  colspan="2" > 日期：
+                                <div class="form-group">
+                                    <div class='input-group date' id='checkdatetimepicker' style="width:280px">
+                                        <input name="check_date" type='text' class="form-control" />
+                                        <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 <input type="submit" class="btn btn-block" value="提交">
             </div>
         </div>
