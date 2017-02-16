@@ -10,52 +10,11 @@
         <div class="row">
             <% include _base_sidebar%>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <form method="post" action="submit">
+                <form method="post" action="/create_record" >
+                    <input type="hidden" name="patientid" value="<%=patientid%>">
                     <% include table_medical_record_new%>
                     <input type="submit" class="btn btn-block btn-primary" value="提交">
                 </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document" style="width:800px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
-                </div>
-                <div class="modal-body">
-                    <div class="container-row">
-                        <% include table_shps%>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">保存</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="dbasModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document" style="width:800px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <!--<h4 class="modal-title" id="myModalLabel">Modal title</h4>-->
-                </div>
-                <div class="modal-body">
-                    <div class="container-row">
-                        <% include table_dbas%>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">保存</button>
-                </div>
             </div>
         </div>
     </div>

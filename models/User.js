@@ -6,7 +6,8 @@
 // get an instance of mongoose and mongoose.Schema
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
+// mongoose.connect('mongodb://sleepcenter:sleepcenter@localhost:27017/sleepcenter')
+mongoose.connect('mongodb://localhost/sleepcenter');
 // set up a mongoose model and pass it using module.exports
 module.exports = mongoose.model('User', new Schema({
     name: String,

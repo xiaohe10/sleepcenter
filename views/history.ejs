@@ -11,8 +11,19 @@
             <% include _base_sidebar%>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <table class="table">
-                    <tr><th>量表类型</th><th>日期</th><th>操作</th></tr>
-                    <tr><td>睡眠量表</td><td>2016-01-07 16:00</td><td><a href="">查看</a></td></tr>
+                    <tr><th>日期</th><th>操作</th></tr>
+                    <% for(var i =0; i < records.length;i++){%>
+                    <% var d = new Date(records[i].created);
+                        function zeroPad(num, places) {
+                            var zero = places - num.toString().length + 1;
+                            return Array(+(zero > 0 && zero)).join("0") + num;
+                        }
+                    time = d.getFullYear()+'-'+zeroPad(d.getMonth(),2)+'-'+zeroPad(d.getDate(),2)+' '+zeroPad(d.getHours(),2)+':'+zeroPad(d.getMinutes(),2)+':'+zeroPad(d.getSeconds(),2);
+//                        time = formatDate(d, "dddd h:mmtt d MMM yyyy")
+                    %>
+                    <tr><td><%=time%></td><td><a href="/record?id=<%=records[i]._id%>&patientid=<%=patientid%>">查看</a></td></tr>
+                    <%}%>
+
                 </table>
             </div>
         </div>

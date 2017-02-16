@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include _base_head %>
+</head>
+
+<body>
+<% include _base_nav %>
+<div class="container-fluid">
+    <div class="row">
+        <% include _base_sidebar%>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <table class="table table-bordered" style="background-color:white;text-align:center;">
+                <tr>
+                    <td colspan="4" >
+                        <h1>睡眠中心客户登记表 </h1>
+                    </td>
+
+
+                    <td colspan="2" ><div class="input-group">
+                            <div class="input-group-addon">NO.</div>
+                            <input class="form-control" type="text"  name="number"  value="1000">
+                        </div></td>
+
+
+                <tr>
+                    <th >姓名</th>
+                    <td >
+                        <input class="form-control" type="text" name="name" value="zhangsan">
+                    </td>
+
+
+
+                    <th >性别</th>
+                    <td >
+                        <select class="form-control" name="gender">
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select>
+                    </td>
+
+                    <th >年龄</th>
+                    <td >
+                        <input type="text" name="age" class="form-control" value="24">
+                    </td>
+
+                </tr>
+
+
+                <tr>
+                    <th >电话</th>
+                    <td colspan="2" >
+                        <input class="form-control"  type="text" name="telphone"
+                               value="13333333333">
+                    </td>
+
+                    <th >介绍人／信息渠道</th>
+                    <td colspan="2">
+                        <input class="form-control"  type="text" name="sponsor"
+                               value="lisi">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th >登记时间</th>
+                    <td colspan="2" >
+                        <!--<input class="form-control" type="text" name="register_date"-->
+                        <!--value="2016-01-01">-->
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker' style="width:280px">
+                                <input name="register_date" type='text' class="form-control" />
+                                <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+                            </div>
+                        </div>
+
+
+                    </td>
+
+                    <th >登记人</th>
+                    <td colspan="2">
+                        <input class="form-control" type="text" name="register_person"
+                               value="wangwu">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th >主诉</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="zhusu" rows="3" >主诉文本框。</textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th >量表筛查</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="liangbiaoshaicha" rows="3" >筛查文本框。</textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th >诊断</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="diagnose" rows="3" >诊断文本框。</textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th >干预方法</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="interfree" rows="3" >干预方法文本框。</textarea>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <th >治疗方法</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="treat" rows="3" >治疗方案文本框。</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th >结果</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="result" rows="3" >结果文本框。</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th >随访</th>
+                    <td  colspan="5" >
+                        <textarea  class="form-control" name="accompany" rows="3" >随访文本框。</textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" class="btn btn-block" value="提交">
+        </div>
+    </div>
+</div>
+</body>
+</html>

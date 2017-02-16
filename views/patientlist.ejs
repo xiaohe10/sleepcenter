@@ -7,12 +7,61 @@
 <body>
 <% include _base_nav %>
 <div class="container-fluid">
+    <div class="container" style="padding:20px 0;">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#addPatient">
+            添加病人
+        </button>
+    </div>
     <div class="container">
         <table class="table">
-            <tr><th>姓名</th><th>基本信息</th><th>操作</th></tr>
-            <tr><td>病人甲</td><td>23岁</td><td><a href="/medical_record?patientname=病人甲">管理</a></td></tr>
+            <tr><th>姓名</th><th>操作</th></tr>
+            <% for(var i =0; i < patients.length;i++){%>
+                <tr><td><%=patients[i].name%></td>
+                    <td>
+                        <a class="btn btn-primary" href="/medical_record?patientid=<%=patients[i]._id%>">管理</a>
+                        <a class="btn btn-danger" href="javascript:deleteConfirm('<%=patients[i]._id%>')">删除</a>
+                    </td>
+                </tr>
+            <%}%>
+
         </table>
+        <script>
+            function deleteConfirm(patientid) {
+                if (confirm("是否删除此病人!") == true) {
+                    window.location.assign('/deletepatient?patientid='+patientid);
+                } else {
+                }
+
+            }
+        </script>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addPatient" tabindex="-1" role="dialog" aria-labelledby="addPatientLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加病人</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/addpatient" method="post">
+                        <div class="form-group">
+                            <label >姓名</label>
+                            <input type="text" class="form-control" name="patientname"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">添加 </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

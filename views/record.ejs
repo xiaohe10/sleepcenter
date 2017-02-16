@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include _base_head %>
+</head>
+
+<body>
+<% include _base_nav %>
+<div class="container-fluid">
+    <div class="row">
+        <% include _base_sidebar%>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <% include table_medical_record_show%>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $.get('/record_json?recordID=<%=recordID%>',function(data){
+        data = JSON.parse(data.content);
+        console.log(data);
+        //text
+        $("input[type=text]").each(function(){
+
+            attr_name =$(this).attr('name');
+            if(data.hasOwnProperty(attr_name)){
+                $("input[name='"+attr_name+"'").val(data[attr_name]);
+//                $("input[name='"+attr_name+"'").val(data[attr_name]);
+//                $("input[name='"+attr_name+"'").css("background-color","yellow");
+            }else{
+//                $("input[name='"+attr_name+"'").css("background-color","red");
+            }
+//            $(this).prop('readonly', true);
+        });
+        //checkbox
+        $("input[type=checkbox]").each(function(){
+            attr_name =$(this).attr('name');
+            attr_val = $(this).attr('value');
+//            console.log(attr_name);
+//            console.log(attr_val);
+            if(data.hasOwnProperty(attr_name)){
+                if(data[attr_name].indexOf(attr_val) >= 0){
+                    $(this).prop('checked', true);
+                    $(this).css("background-color","blue");
+                }
+            }
+//            $(this).prop('disabled', 'disabled');
+        });
+
+        //textarea
+        $("textarea").each(function(){
+
+            attr_name =$(this).attr('name');
+            attr_val = $(this).attr('value');
+//            console.log(attr_name);
+//            console.log(attr_val);
+            if(data.hasOwnProperty(attr_name)){
+                $("textarea[name='"+attr_name+"'").val(data[attr_name]);
+//                $("input[name='"+attr_name+"'").val(data[attr_name]);
+//                $("textarea[name='"+attr_name+"'").css("background-color","blue");
+            }else{
+//                $("textarea[name='"+attr_name+"'").css("background-color","red");
+            }
+//            $(this).prop('readonly', true);
+        });
+
+        //radio
+        $("input[type=radio]").each(function(){
+            attr_name =$(this).attr('name');
+            attr_val = $(this).attr('value');
+//            console.log(attr_name);
+//            console.log(attr_val);
+            if(data.hasOwnProperty(attr_name)){
+                if(data[attr_name].indexOf(attr_val) >= 0){
+                    $(this).prop('checked', true);
+                    $(this).css("background-color","blue");
+                }
+            }
+//            $(this).prop('disabled', 'disabled');
+        });
+
+        //select
+        $("select").each(function(){
+            attr_name =$(this).attr('name');
+            attr_val = $(this).val();
+            if(data.hasOwnProperty(attr_name)){
+                $(this).val("3");
+                console.log(attr_name,attr_val,$(this).val());
+            }
+//            $(this).prop('disabled', 'disabled');
+        });
+
+    })
+</script>
+</body>
+</html>
