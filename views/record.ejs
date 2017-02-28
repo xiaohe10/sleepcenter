@@ -84,7 +84,7 @@
             attr_name =$(this).attr('name');
             attr_val = $(this).val();
             if(data.hasOwnProperty(attr_name)){
-                $(this).val("3");
+                $(this).val(data[attr_name]);
                 console.log(attr_name,attr_val,$(this).val());
             }
 //            $(this).prop('disabled', 'disabled');

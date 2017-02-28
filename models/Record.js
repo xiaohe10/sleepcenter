@@ -7,7 +7,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var User = require('./user')
+var User = require('./User')
 
 // set up a mongoose model and pass it using module.exports
 module.exports = mongoose.model('Record', new Schema({
