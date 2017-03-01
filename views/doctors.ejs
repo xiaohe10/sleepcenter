@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include _base_head %>
+</head>
+
+<body>
+<% include _base_nav %>
+<div class="container-fluid">
+    <%if(message){%>
+    <div class="alert alert-danger" role="alert"><%=message%></div>
+    <%}%>
+    <div class="container" style="padding:20px 0;">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#addDoctor">
+            添加医生
+        </button>
+    </div>
+    <div class="container">
+        <table class="table">
+            <tr><th>姓名</th><th>操作</th></tr>
+            <% for(var i =0; i < doctors.length;i++){%>
+            <tr><td><%=doctors[i].username%></td>
+                <td>
+                    <a class="btn btn-danger" href="javascript:deleteConfirm('<%=doctors[i]._id%>')">删除</a>
+                </td>
+            </tr>
+            <%}%>
+
+        </table>
+        <script>
+            function deleteConfirm(doctorid) {
+                if (confirm("是否删除此医生!") == true) {
+                    window.location.assign('/users/deletedoctor?doctorid='+doctorid);
+                } else {
+                }
+
+            }
+        </script>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addDoctor" tabindex="-1" role="dialog" aria-labelledby="addPatientLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加医生账号</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/users/register" method="post">
+                        <div class="form-group">
+                            <label >用户名</label>
+                            <input type="text" class="form-control" name="username"/>
+                        </div>
+                        <div class="form-group">
+                            <label >密码</label>
+                            <input type="text" class="form-control" name="password"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">添加 </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

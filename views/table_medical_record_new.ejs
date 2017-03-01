@@ -1,7 +1,7 @@
-<table class="table table-bordered">
+<table class="table table-bordered" style="width:990px;margin:0 auto">
     <tr>
         <td colspan="6" >
-            <h2>北大医疗怡健殿睡眠门诊病历记录</h2>
+            <h2>北大医疗怡健殿睡眠门诊病历</h2>
         </td>
     </tr>
     <tr>
@@ -14,7 +14,7 @@
             <!--value="2016-01-01">-->
             <div class="form-group">
                 <div class='input-group date' id='datetimepicker' style="width:280px">
-                    <input name="register_date" type='text' class="form-control" />
+                    <input name="register_date" type='text' class="form-control profile" />
                     <span class="input-group-addon">
               <span class="glyphicon glyphicon-calendar"></span>
             </span>
@@ -25,7 +25,7 @@
         <th >病案号</th>
         <td colspan="1" ><div class="input-group">
                 <div class="input-group-addon">NO.</div>
-                <input class="form-control" type="text"  name="idNumber"  value="1000">
+                <input class="form-control profile" type="text"  name="idNumber"  value="1000">
             </div>
         </td>
     </tr>
@@ -33,14 +33,14 @@
     <tr>
         <th >姓名</th>
         <td >
-            <input class="form-control" type="text" name="name" value="">
+            <input class="form-control profile" type="text" name="name" value="">
         </td>
 
 
 
         <th >性别</th>
         <td >
-            <select class="form-control" name="gender">
+            <select class="form-control profile" name="gender">
                 <option value="male">男</option>
                 <option value="female">女</option>
             </select>
@@ -48,7 +48,7 @@
 
         <th >年龄</th>
         <td >
-            <input type="text" name="age" class="form-control" value="">
+            <input type="text" name="age" class="form-control profile" value="">
         </td>
     </tr>
 
@@ -59,7 +59,7 @@
 
             <div class="form-group">
                 <div class='input-group date' id='brithdatetimepicker' style="width:280px">
-                    <input name="brith_date" type='text' class="form-control" />
+                    <input name="brith_date" type='text' class="form-control profile" />
                     <span class="input-group-addon">
               <span class="glyphicon glyphicon-calendar"></span>
             </span>
@@ -70,13 +70,13 @@
 
         <th >民族</th>
         <td colspan="1">
-            <input class="form-control" type="text" name="nation"
+            <input class="form-control profile" type="text" name="nation"
                    value="汉">
         </td>
 
         <th colspan="1">婚姻</th>
         <td colspan="1" >
-            <select class="form-control" name="marriage">
+            <select class="form-control profile" name="marriage">
                 <option value="unmarried">未婚</option>
                 <option value="married">已婚</option>
                 <option value="divorce">离异</option>
@@ -90,7 +90,7 @@
     <tr>
         <th >职业</th>
         <td colspan="1">
-            <select class="form-control" name="occupation">
+            <select class="form-control profile" name="occupation">
                 <option value="1">计算机、IT、互联网</option>
                 <option value="2">金融、银行、证券等</option>
                 <option value="3">航空、民航、驾驶等行业</option>
@@ -99,18 +99,19 @@
                 <option value="6">新闻、广告、设计、教育</option>
                 <option value="7">销售、服务行业</option>
                 <option value="8">演艺、体育行业</option>
-                <option value="9">制造工人</option>
-                <option value="10">农林牧渔业</option>
-                <option value="11">军人</option>
-                <option value="12">学生及学龄前儿童</option>
-                <option value="13">退休人员</option>
-                <option value="14">无业及自由职业者</option>
+                <option value="9">医护人员</option>
+                <option value="10">制造工人</option>
+                <option value="11">农林牧渔业</option>
+                <option value="12">军人</option>
+                <option value="13">学生及学龄前儿童</option>
+                <option value="14">退休人员</option>
+                <option value="15">无业及自由职业者</option>
             </select>
         </td>
 
         <th >教育程度</th>
         <td >
-            <select class="form-control" name="education">
+            <select class="form-control profile" name="education">
                 <option value="1">研究生及以上</option>
                 <option value="2">本科</option>
                 <option value="3">大专</option>
@@ -120,7 +121,7 @@
         </td>
         <th >子女情况</th>
         <td colspan="3">
-            <input class="form-control" type="text" name="children"
+            <input class="form-control profile" type="text" name="children"
                    value="">
         </td>
     </tr>
@@ -128,12 +129,12 @@
     <tr>
         <th >工作单位</th>
         <td colspan="1">
-            <input class="form-control" type="text" name="workplace"
+            <input class="form-control profile" type="text" name="workplace"
                    value="">
         </td>
         <th >职务</th>
         <td colspan="3">
-            <input class="form-control" type="text" name="post"
+            <input class="form-control profile" type="text" name="post"
                    value="">
         </td>
     </tr>
@@ -142,12 +143,12 @@
     <tr>
         <th >证件号码</th>
         <td colspan="1">
-            <input class="form-control" type="text" name="ID"
+            <input class="form-control profile" type="text" name="ID"
                    value="">
         </td>
         <th >家庭住址</th>
         <td colspan="3">
-            <input class="form-control" type="text" name="address"
+            <input class="form-control profile" type="text" name="address"
                    value="">
         </td>
 
@@ -157,7 +158,7 @@
         <th  rowspan="3" >联系方式</th>
         <th >本人电话</th>
         <td colspan="4">
-            <input class="form-control" type="text" name="telephone"
+            <input class="form-control profile" type="text" name="telephone"
                    value="">
         </td>
 
@@ -165,14 +166,14 @@
     <tr>
         <th >备用联系人电话</th>
         <td colspan="4">
-            <input class="form-control" type="text" name="spare_tel"
+            <input class="form-control profile" type="text" name="spare_tel"
                    value="">
         </td>
 
     <tr>
         <th >电子邮箱</th>
         <td colspan="4">
-            <input class="form-control" type="text" name="email"
+            <input class="form-control profile" type="text" name="email"
                    value="">
         </td>
     </tr>
@@ -954,7 +955,7 @@
     </tr>
     <tr>
         <td>
-            胸部<input style="display: inline-block;width:200px;margin-left:10px;" class="form-control" type="text" name="oral_X-ray_position1" value="">
+            <label style="display: inline-block;">胸部</label><input style="display: inline-block;width:200px;margin-left:10px;" class="form-control" type="text" name="oral_X-ray_position1" value="">
         </td>
         <td colspan="2">
             <input class="form-control" type="text" name="oral_X-ray_expression1" value="">

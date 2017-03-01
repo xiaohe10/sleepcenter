@@ -10,12 +10,23 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
             <ul class="nav navbar-nav">
+                <%if(username == 'admin'){%>
+                    <li <% if(title=='医生管理'){%> class="active" <%}%>><a href="/users/doctors">医生管理</a></li>
+                <%}%>
                 <li <% if(title=='病人列表'){%> class="active" <%}%>><a href="/">病人列表</a></li>
-                <% if(title !='病人列表'){%> <li class="active"><a href="#"><%= patientname%></a></li> <%}%>
+                <% if(title !='病人列表' && title != '医生管理'){%>
+                    <li class="dropdown active" >
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">病人：<%= patientname%> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li <% if(title == '综合病历记录表') {%>class="active"<% } %>><a href="/medical_record?patientid=<%=patientid%>">综合病历记录表</a></li>
+                            <li <% if(title == '历史记录') {%>class="active"<% }%>><a href="/history?patientid=<%=patientid%>">历史记录</a></li>
+                        </ul>
+                    </li>
+                <%}%>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">医生 <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= username%> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/users/logout">退出</a></li>
                     </ul>

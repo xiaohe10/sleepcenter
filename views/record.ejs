@@ -2,16 +2,23 @@
 <html>
 <head>
     <% include _base_head %>
+    <style>
+        body{
+            background-color:#eeffee;
+        }
+        input{
+            background-color:#eeffee !important;
+        }
+    </style>
 </head>
 
 <body>
 <% include _base_nav %>
-<div class="container-fluid">
-    <div class="row">
-        <% include _base_sidebar%>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <% include table_medical_record_show%>
-        </div>
+<div class="table_wrapper">
+    <% //include _base_sidebar%>
+    <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
+    <div class="main">
+        <% include table_medical_record_show%>
     </div>
 </div>
 

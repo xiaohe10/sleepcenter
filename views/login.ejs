@@ -27,13 +27,13 @@
 <div class="container">
 
 
-    <form class="form-signin" method="post" action="/users/login_after">
+    <form class="form-signin" method="post" action="/users/login">
         <%if(message){%>
         <div class="alert alert-danger" role="alert"><%=message%></div>
         <%}%>
 
         <label for="inputEmail" class="sr-only">用户名</label>
-        <input type="text" name="user" class="form-control" placeholder="用户名" required autofocus>
+        <input type="text" name="username" class="form-control" placeholder="用户名" required autofocus>
         <label for="inputPassword" class="sr-only">密码</label>
         <input type="password" name="password" class="form-control" placeholder="密码" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>

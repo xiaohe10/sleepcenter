@@ -5,12 +5,16 @@
 
 // get an instance of mongoose and mongoose.Schema
 var mongoose = require('mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
+
 var Schema = mongoose.Schema;
-//mongoose.connect('mongodb://sleepcenter:sleepcenter@localhost:27017/sleepcenter')
-mongoose.connect('mongodb://localhost/sleepcenter');
 // set up a mongoose model and pass it using module.exports
-module.exports = mongoose.model('User', new Schema({
+var Account =  new Schema({
     name: String,
     password: String,
     realname:String
-}));
+});
+
+Account.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model('Account', Account);
