@@ -15,14 +15,14 @@ function isAuthenticated(req, res, next) {
   res.redirect('/users/login');
 }
 
-router.get('/doctors',isAuthenticated,function(req,res){
+router.get('/doctors',function(req,res){
   message = req.query.message
   Account.find().sort({created:-1}).exec(function(err,doctors){
     if(err){
       res.render('error', { error: err});
     } else{
       // console.log(patients);
-      res.render('doctors', { title: '医生管理',doctors:doctors,message:message,username:req.user.username});
+      res.render('doctors', { title: '医生管理',doctors:doctors,message:message,username:'test'});
     }
   })
 })

@@ -50,7 +50,7 @@ router.get('/history',isAuthenticated, function(req, res, next) {
     if(err){
       res.render('error', { error: err});
     }else{
-      Record.find({patient:patientid}).sort({created:-1}).exec(function(err,records){
+      Record.find({patient:patientid}).sort({created:-1}).populate('doctor').exec(function(err,records){
         if(err){
           res.render('error', { error: err});
         }else{
@@ -84,6 +84,7 @@ router.post('/create_record', isAuthenticated,function(req, res, next) {
   record = new Record();
   record.content = JSON.stringify(record_json);
   record.patient = patientid;
+  record.doctor = req.user;
   record.save(function(err){
     if(!err){
       //profile update

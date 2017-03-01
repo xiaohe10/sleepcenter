@@ -12,7 +12,7 @@
             <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
             <div class="table-responsive">
                 <table class="table">
-                    <tr><th>日期</th><th>操作</th></tr>
+                    <tr><th>日期</th><th>填写医生</th><th>操作</th></tr>
                     <% for(var i =0; i < records.length;i++){%>
                     <% var d = new Date(records[i].created);
                         function zeroPad(num, places) {
@@ -22,7 +22,7 @@
                     time = d.getFullYear()+'-'+zeroPad(d.getMonth(),2)+'-'+zeroPad(d.getDate(),2)+' '+zeroPad(d.getHours(),2)+':'+zeroPad(d.getMinutes(),2)+':'+zeroPad(d.getSeconds(),2);
 //                        time = formatDate(d, "dddd h:mmtt d MMM yyyy")
                     %>
-                    <tr><td><%=time%></td><td><a href="/record?id=<%=records[i]._id%>&patientid=<%=patientid%>">查看</a></td></tr>
+                    <tr><td><%=time%></td><td><%= records[i].doctor.username%></td><td><a href="/record?id=<%=records[i]._id%>&patientid=<%=patientid%>">查看</a></td></tr>
                     <%}%>
 
                 </table>
